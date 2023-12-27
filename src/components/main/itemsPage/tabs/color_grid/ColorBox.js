@@ -129,7 +129,7 @@ function ColorBox({ productData, compChart }) {
       <div className="box color parent">
         <div className="child">{handleColors(productData.Colors)}</div>
       </div>
-      <h2></h2>
+      
       {handleColorChart()}
     </>
   );

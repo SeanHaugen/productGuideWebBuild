@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import UserNotes from "./NotesDisplay";
 import Button from "@mui/material/Button";
 import Textarea from "@mui/joy/Textarea";
 
@@ -9,35 +8,35 @@ import { Item } from "../../../../helper/Item";
 const NoteTaker = ({ username, currentPage }) => {
   const [note, setNote] = useState("");
   const [userNotes, setUserNotes] = useState([]);
-  // const [page, setPage] = useState([]);
 
   console.log(username);
 
-  //   useEffect(() => {
-  //     // Fetch user notes for the current page when the component mounts
-  //     fetchUserNotes();
-  //   }, [currentPage, username]);
+  useEffect(() => {
+    // Fetch user notes when the component mounts or when username changes
+    const fetchUserNotes = async () => {
+      try {
+        if (!username) {
+          console.error("Username is undefined");
+          return;
+        }
 
-  //   const fetchUserNotes = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `https://dull-pink-termite-slip.cyclic.app/notes/${username}`
-  //       );
-  //       setUserNotes(response.data.notes);
-  //     } catch (error) {
-  //       console.error("Error fetching user notes:", error);
-  //     }
-  //   };
+        const response = await axios.get(
+          `https://dull-pink-termite-slip.cyclic.app/notes/${username}`
+        );
+        setUserNotes(response.data.notes || []);
+      } catch (error) {
+        console.error("Error fetching user notes:", error);
+      }
+    };
 
-  const handleNoteChange = (e, v) => {
+    fetchUserNotes();
+  }, [username]);
+
+  const handleNoteChange = (e) => {
     setNote(e.target.value);
   };
 
-  //   const handlePage = (e) => {
-  //     setPage(e.target.value);
-  //   };
-
-  const saveNote = async () => {
+  const handleSaveNote = async () => {
     try {
       if (!username) {
         console.error("Username is undefined");
@@ -50,8 +49,8 @@ const NoteTaker = ({ username, currentPage }) => {
         { note }
       );
 
-      // Fetch updated user notes
-      //   fetchUserNotes();
+      // Update the userNotes state with the new note
+      setUserNotes((prevUserNotes) => [...prevUserNotes, note]);
 
       // Clear the note input
       setNote("");
@@ -59,6 +58,7 @@ const NoteTaker = ({ username, currentPage }) => {
       console.error("Error saving note:", error);
     }
   };
+
   return (
     <Item>
       <h2>*currently notes appear for all Items* </h2>
@@ -76,11 +76,9 @@ const NoteTaker = ({ username, currentPage }) => {
         onChange={handleNoteChange}
       />
 
-      <Button variant="contained" color="success" onClick={saveNote}>
+      <Button variant="contained" color="success" onClick={handleSaveNote}>
         Save Note
       </Button>
-
-      <UserNotes username={username} />
     </Item>
   );
 };

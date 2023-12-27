@@ -19,14 +19,11 @@ function PricingTable({
   useFetchPromoData,
 }) {
   const [priceData, setPriceData] = useState([]);
-  // const [updatePricing, setUpdatePricing] = useState(null);
   const [selectedElement, setSelectedElement] = useState({
     rowIndex: null,
     cellIndex: null,
     value: null,
   });
-
-
 
   usePricingData(setPriceData, productData.Item_Number);
 
@@ -34,6 +31,21 @@ function PricingTable({
     return item.Item_Number;
   });
   console.log(useFetchPromoData);
+
+  const handleCellClick = (rowIndex, cellIndex, cellValue) => {
+    setSelectedElement({
+      rowIndex: rowIndex,
+      cellIndex: cellIndex,
+      value: cellValue,
+    });
+  };
+
+  const handleCellValueChange = (event) => {
+    setSelectedElement((prevSelectedElement) => ({
+      ...prevSelectedElement,
+      value: event.target.value,
+    }));
+  };
 
   return (
     <TableContainer component={Paper} style={{ margin: "10px" }}>
@@ -66,6 +78,9 @@ function PricingTable({
                           ? "line-through"
                           : "none",
                     }}
+                    onClick={() =>
+                      handleCellClick(rowIndex, cellIndex, cellData)
+                    }
                   >
                     {rowIndex === selectedElement.rowIndex &&
                     cellIndex === selectedElement.cellIndex ? (
@@ -73,7 +88,7 @@ function PricingTable({
                         <input
                           type="text"
                           value={selectedElement.value}
-                          // onChange={handleCellValueChange}
+                          onChange={handleCellValueChange}
                         />
                         {/* <SaveIcon onClick={handleSaveClick} /> */}
                       </>

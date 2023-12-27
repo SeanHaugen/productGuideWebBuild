@@ -28,9 +28,6 @@ function CategoriesPage({
   useFetchCategoryData(setProductsCategory, category);
   // console.log(productsCategory);
 
-  const toggleImagehandler = () => {
-    setToggleImage(!toggleImage);
-  };
 
   return (
     <>
@@ -61,19 +58,19 @@ function CategoriesPage({
               >
                 {toggleImage ? (
                   <div>
-<ListItemText primary={subCat} style={{ textAlign: 'center' }}>
-  {toggleImage && (
-    <div>
-      {/* Render your image here */}
-      <img
-        src={toggleImage ? 'image-on.png' : 'image-off.png'}
-        alt="Toggle Image"
-        style={{ width: '50px', height: '50px' }}
-      />
-    </div>
-  )}
-  {subCat}
-</ListItemText>
+                <ListItemText primary={subCat} style={{ textAlign: 'center' }}>
+                  {toggleImage && (
+                    <div>
+                      {/* Render your image here */}
+                      <img
+                        src={toggleImage ? 'image-on.png' : 'image-off.png'}
+                        
+                        style={{ width: '50px', height: '50px' }}
+                      />
+                    </div>
+                  )}
+                  {subCat}
+                </ListItemText>
                   </div>
                 ) : (
                   <ListItemText

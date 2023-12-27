@@ -25,12 +25,12 @@ function StockButtons({
     console.log("Fetching initial value...");
     fetchLowStockValue(productData.Item_Number).then((value) => {
       setIsLowStock(value);
-    });
+    }, []);
 
     // fetchOOSValue(productData.Item_Number).then((value) => {
     //   setIsOutOfStock(value);
     // });
-  }, [productData.Item_Number]);
+  }, [productData.Item_Number, setIsLowStock]);
 
   useEffect(() => {
     console.log("Fetching initial value...");
