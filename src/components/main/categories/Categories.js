@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 import { useFetchCategoryData } from "../../../api/api";
@@ -16,7 +16,7 @@ function CategoriesPage({
   productData
 }) {
   // const [productsCategory, setProductsCategory] = useState([]);
-  const [toggleImage, setToggleImage] = useState(true);
+  // const [toggleImage, setToggleImage] = useState(true);
 
 
   useFetchCategoryData(setProductsCategory, category);

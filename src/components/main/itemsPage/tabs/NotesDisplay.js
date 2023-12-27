@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Button from "@mui/material/Button";
-import { Item } from "../../../../helper/Item";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const UserNotes = ({ username }) => {

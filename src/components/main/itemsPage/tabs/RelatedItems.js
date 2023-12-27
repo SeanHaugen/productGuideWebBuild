@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSearchData } from "../../../../api/api";
 import { Item } from "../../../../helper/Item";
 import { NavLink } from "react-router-dom";
-import CircularProgress from "@mui/material/CircularProgress";
 
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";

@@ -1,12 +1,11 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { useHandleMediaInfo } from "../../../../api/api";
 import axios from "axios";
 import { Item } from "../../../../helper/Item";
 
 function MediaSpecs({ productData, materialsArray, showMaterials }) {
   const [mediaInfo, setMediaInfo] = useState([]);
-  const [matchingMedia, setMatchingMedia] = useState(null);
+  // const [matchingMedia, setMatchingMedia] = useState(null);
   const [selectedType, setSelectedType] = useState("");
   // useHandleMediaInfo(setMediaInfo, productData.Materials);
   // let renderMediaSpecs = (mediaObject) => {
@@ -19,6 +18,8 @@ function MediaSpecs({ productData, materialsArray, showMaterials }) {
   //     </ul>
   //   ));
   // };
+
+  console.log(selectedType)
   useEffect(() => {
     async function fetchData() {
       try {
@@ -33,6 +34,8 @@ function MediaSpecs({ productData, materialsArray, showMaterials }) {
     }
     fetchData();
   }, []);
+
+  console.log(selectedType);
 
   const matchingTypes = mediaInfo
     .filter((mediaSpecs) =>

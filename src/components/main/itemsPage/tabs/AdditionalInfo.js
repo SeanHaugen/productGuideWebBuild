@@ -62,13 +62,13 @@ function AdditionalInfo({ productData }) {
 
   console.log(productData.additional_info);
 
-  const renderAdditionalInfoList = () => {
-    return additionalInfoList.map((info, index) => (
-      <ul key={index}>
-        <li>{info}</li>
-      </ul>
-    ));
-  };
+  // const renderAdditionalInfoList = () => {
+  //   return additionalInfoList.map((info, index) => (
+  //     <ul key={index}>
+  //       <li>{info}</li>
+  //     </ul>
+  //   ));
+  // };
 
   return (
     <div>

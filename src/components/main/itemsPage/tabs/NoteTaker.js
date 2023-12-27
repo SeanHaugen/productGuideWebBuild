@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import UserNotes from "./NotesDisplay";
 import Button from "@mui/material/Button";
@@ -9,7 +9,7 @@ import { Item } from "../../../../helper/Item";
 const NoteTaker = ({ username, currentPage }) => {
   const [note, setNote] = useState("");
   const [userNotes, setUserNotes] = useState([]);
-  const [page, setPage] = useState([]);
+  // const [page, setPage] = useState([]);
 
   console.log(username);
 

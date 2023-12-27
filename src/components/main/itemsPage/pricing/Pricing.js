@@ -26,6 +26,8 @@ function PricingTable({
     value: null,
   });
 
+
+
   usePricingData(setPriceData, productData.Item_Number);
 
   let promoArray = selectedPromo.map((item, index) => {

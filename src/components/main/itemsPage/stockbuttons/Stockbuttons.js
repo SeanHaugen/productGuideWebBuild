@@ -37,7 +37,7 @@ function StockButtons({
     fetchOOSValue(productData.Item_Number).then((value) => {
       setIsOutOfStock(value);
     });
-  }, [productData.Item_Number]);
+  }, [productData.Item_Number, setIsOutOfStock]);
 
   const handleLowStockCheckboxChange = async () => {
     if (isLowStock !== null) {

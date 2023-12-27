@@ -33,7 +33,7 @@ function ItemTabs({
   useEffect(() => {
     setFinishingStyle(productData.SubCategory);
     setComparisonChart(productData.Category);
-  }, [productData.Category]);
+  }, [productData.Category, productData.SubCategory]);
 
   console.log(compChart);
   const materialsArray = productData.Materials?.split(/\s*,\s*/) || [];

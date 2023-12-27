@@ -22,7 +22,7 @@ function OutdoorProducts({ productData, setProduct }) {
       }
 
       fetchData();
-    }, []);
+    }, [setState]);
   };
 
   useGetNewItems(setGetOutdoorProducts);

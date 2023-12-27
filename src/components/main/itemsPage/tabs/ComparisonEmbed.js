@@ -1,8 +1,8 @@
 import React from "react";
 import Banner_material from "../../../../Resources/ComparisonCharts/BannerComp.png";
-import popup from "../../../../Resources/ComparisonCharts/popupComp.png";
+// import popup from "../../../../Resources/ComparisonCharts/popupComp.png";
 import Retractor from "../../../../Resources/ComparisonCharts/RetractorComp.png";
-import sail_sign from "../../../../Resources/ComparisonCharts/SailSignComp.png";
+// import sail_sign from "../../../../Resources/ComparisonCharts/SailSignComp.png";
 import Signage from "../../../../Resources/ComparisonCharts/SignageComp.png";
 import Tablecovers from "../../../../Resources/ComparisonCharts/TablethrowComp.png";
 import Tents from "../../../../Resources/ComparisonCharts/TentComp.png";
@@ -46,6 +46,7 @@ function ComparisonEmbed({ compChart, productData, category }) {
     <>
       <div>
         <iframe
+          title="comparison charts"
           src="https://main--sd-comparison-guide.netlify.app"
           width="1500"
           height="800"

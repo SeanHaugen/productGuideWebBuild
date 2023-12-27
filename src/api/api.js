@@ -211,7 +211,7 @@ export const useHandleUpdatePricing = (setState, item, row, cell, value) => {
       }
     }
     updatePricing(row, cell, value);
-  }, [item, setState]);
+  }, [item, setState, row, cell, value]);
 };
 
 export const useHandleEurofitInfo = (setState, item) => {

@@ -43,7 +43,7 @@ export default function DashBoard({
   setSubCategory,
   productsCategory,
 }) {
-  const [open, setOpen] = useState(true);
+  // const [open, setOpen] = useState(true);
   const [categoryData, setCategoryData] = useState([]);
   const navigate = useNavigate();
 
@@ -96,14 +96,14 @@ export default function DashBoard({
           />
         </Search>
       </StyledToolbar>
-      <Drawer variant="permanent" open={open}>
+      <Drawer variant="permanent" >
         <List style={{ paddingTop: "5em" }}>
           {categoryData.slice(2).map((cat, index) => (
             <ListItem key={index} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
+                  // justifyContent: open ? "initial" : "center",
                   px: 2.5,
                 }}
                 component={NavLink}
@@ -113,7 +113,7 @@ export default function DashBoard({
                 <ListItemText
                   primary={cat}
                   sx={{
-                    opacity: open ? 1 : 0,
+                    // opacity: open ? 1 : 0,
                     color: "#CECDCB", // Set link text color to white
                   }}
                 />
