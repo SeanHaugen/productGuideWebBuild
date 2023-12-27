@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 import { useFetchCategoryData } from "../../../api/api";
@@ -16,18 +16,32 @@ function CategoriesPage({
   productData
 }) {
   // const [productsCategory, setProductsCategory] = useState([]);
-  const [toggleImage, setToggleImage] = useState(true);
+  // const [toggleImage, setToggleImage] = useState(true);
 
 
-  const handleToggleImage = () => {
-    setToggleImage((prevToggleImage) => !prevToggleImage);
-  };
-
-  console.log(handleToggleImage());
-  
   useFetchCategoryData(setProductsCategory, category);
   // console.log(productsCategory);
 
+  // const toggleImagehandler = () => {
+  //   setToggleImage(!toggleImage);
+  // };
+
+  // const handleToggleOutOfStock = async () => {
+  //   try {
+  //     // Replace 'yourSubcategory' with the actual subcategory or retrieve it dynamically
+  //     const subcategory = productData.SubCategory;
+
+  //     const response = await axios.put(
+  //       `https://dull-pink-termite-slip.cyclic.app/toggle-oos/${subcategory}`
+  //     );
+
+  //     // You may need to update this part based on the response structure
+  //     // If the response doesn't contain 'OOS' directly, adjust accordingly
+  //     setIsOutOfStock(response.data.OOS);
+  //   } catch (error) {
+  //     console.error("Error toggling out-of-stock status:", error);
+  //   }
+  // };
 
   return (
     <>
@@ -56,30 +70,17 @@ function CategoriesPage({
                 to={`/${category}/${subCat}`}
                 onClick={() => setSubCategory(subCat)}
               >
-                {toggleImage ? (
+                
                   <div>
-                <ListItemText primary={subCat} style={{ textAlign: 'center' }}>
-                  {toggleImage && (
-                    <div>
-                      {/* Render your image here */}
-                      <img
-                        src={toggleImage ? 'image-on.png' : 'image-off.png'}
-                        alt="Toggled Image"
-                        style={{ width: '50px', height: '50px' }}
-                      />
-                    </div>
-                  )}
-                  {subCat}
-                </ListItemText>
+                    <ListItemText
+                      primary={subCat}
+                      style={{ textAlign: "center" }}
+                    >
+                      {subCat}
+                    </ListItemText>
                   </div>
-                ) : (
-                  <ListItemText
-                    primary={subCat}
-                    style={{ textAlign: "center" }}
-                  >
-                    {subCat}
-                  </ListItemText>
-                )}
+
+                
               </ListItemButton>
             </div>
           );

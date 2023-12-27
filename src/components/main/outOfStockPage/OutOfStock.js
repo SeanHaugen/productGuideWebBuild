@@ -23,7 +23,7 @@ function StockOutList({ productData, setProduct }) {
       }
 
       fetchData();
-    }, []);
+    }, [setState]);
   };
 
   const useFetchLowStockData = (setState) => {
