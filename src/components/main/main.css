@@ -1,0 +1,12 @@
+#card {
+  /* margin-top: 2em;
+  margin-bottom: 0.5em; */
+  background-color: rgba(235, 233, 224, 0.877);
+  /* color: white; */
+}
+
+.main {
+  width: 100%; /* Adjust width to fill the entire width */
+  /* justify-content: center; */
+  align-items: center;
+}
