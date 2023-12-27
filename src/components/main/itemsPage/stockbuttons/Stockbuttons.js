@@ -22,21 +22,17 @@ function StockButtons({
   const [message, setMessage] = useState(null);
 
   useEffect(() => {
-    console.log("Fetching initial value...");
+    console.log("Fetching initial value for Low Stock...");
     fetchLowStockValue(productData.Item_Number).then((value) => {
       setIsLowStock(value);
-    }, []);
-
-    // fetchOOSValue(productData.Item_Number).then((value) => {
-    //   setIsOutOfStock(value);
-    // });
+    }, [productData.Item_Number, setIsLowStock]);
   }, [productData.Item_Number, setIsLowStock]);
 
   useEffect(() => {
-    console.log("Fetching initial value...");
+    console.log("Fetching initial value for Out of Stock...");
     fetchOOSValue(productData.Item_Number).then((value) => {
       setIsOutOfStock(value);
-    });
+    }, [productData.Item_Number, setIsOutOfStock]);
   }, [productData.Item_Number, setIsOutOfStock]);
 
   const handleLowStockCheckboxChange = async () => {

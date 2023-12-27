@@ -64,7 +64,7 @@ function CategoriesPage({
                       {/* Render your image here */}
                       <img
                         src={toggleImage ? 'image-on.png' : 'image-off.png'}
-                        
+                        alt="Toggled Image"
                         style={{ width: '50px', height: '50px' }}
                       />
                     </div>
