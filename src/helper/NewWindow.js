@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
 
 function NewWindowButton({ linkUrl }) {
-  const openLinkInNewWindow = () => {
-    window.open(linkUrl, "_blank", "width=800,height=600");
-  };
+  // const openLinkInNewWindow = () => {
+  //   window.open(linkUrl, "_blank", "width=800,height=600");
+  // };
 
   return (
     <MenuItem>

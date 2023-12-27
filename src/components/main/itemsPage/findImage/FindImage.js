@@ -1,5 +1,5 @@
-import react, { useState, useEffect } from "react";
-import axios from "axios";
+import  { useState, useEffect } from "react";
+
 
 function FindImage({ productData, category, subCategory }) {
   const imageName = `${productData.Item_Number}`;

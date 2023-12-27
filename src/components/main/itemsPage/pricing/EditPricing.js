@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Button from "@mui/joy/Button";
-import Select from "@mui/joy/Select";
-import Option from "@mui/joy/Option";
-import Stack from "@mui/joy/Stack";
 // import { useHandleUpdatePricing } from "../../../../api/api";
 import "./EditPricing.css";
 

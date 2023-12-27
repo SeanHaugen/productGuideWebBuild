@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 
 import { useFetchCategoryData } from "../../../api/api";
 
@@ -18,14 +17,14 @@ function CategoriesPage({
 }) {
   // const [productsCategory, setProductsCategory] = useState([]);
   const [toggleImage, setToggleImage] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+
 
   useFetchCategoryData(setProductsCategory, category);
   // console.log(productsCategory);
 
-  const toggleImagehandler = () => {
-    setToggleImage(!toggleImage);
-  };
+  // const toggleImagehandler = () => {
+  //   setToggleImage(!toggleImage);
+  // };
 
   // const handleToggleOutOfStock = async () => {
   //   try {

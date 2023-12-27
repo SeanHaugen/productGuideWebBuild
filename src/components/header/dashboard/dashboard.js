@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useTheme } from "@mui/material/styles";
+
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import { Toolbar, IconButton, Typography, Button } from "@mui/material";
+import { Toolbar, Typography,  } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled } from "@mui/system";
 import logo from "../../../Resources/frontpage_images/sd-logo.png";
 import { Search } from "../search/Search";
 import { SearchIconWrapper } from "../search/SearchIconWrapper";
-import { Drawer, DrawerHeader } from "./Drawer";
+import { Drawer } from "./Drawer";
 import { StyledInputBase } from "../input/StyledInputBase";
 // import { StyledToolbar } from "../input/StyledToolBar";
 import LowerBar from "./DashboardPages";
 import { useCategoryData, useSearchData } from "../../../api/api";
 import { useFetchCategoryData } from "../../../api/api";
-import SubCategoryDrawer from "./SubCategoryDrawer";
+
 
 const StyledToolbar = styled(Toolbar)({
   backgroundColor: "#091138",

@@ -1,8 +1,5 @@
 import * as React from "react";
-import { NavLink } from "react-router-dom";
-import Breadcrumbs from "@mui/joy/Breadcrumbs";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import Link from "@mui/joy/Link";
+
 
 function Breadcrumb({ productData }) {
   return (

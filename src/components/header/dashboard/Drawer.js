@@ -1,5 +1,5 @@
 import MuiDrawer from "@mui/material/Drawer";
-import { openedMixin, closedMixin } from "../mixin/mixin";
+import { openedMixin } from "../mixin/mixin";
 import { styled } from "@mui/material/styles";
 
 const drawerWidth = 100;

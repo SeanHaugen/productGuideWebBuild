@@ -1,11 +1,10 @@
 import * as React from "react";
-import axios from "axios";
+
 import { useState } from "react";
 import Grid from "@mui/material/Grid";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import Button from "@mui/material/Button";
+
 // eslint-disable-next-line
-import Checkbox from "@mui/material/Checkbox";
 import { Item } from "../../../helper/Item";
 import PricingTable from "./pricing/Pricing";
 import FindImage from "./findImage/FindImage";

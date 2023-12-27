@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './App.css';
 import Main from "./components/main/main";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -8,10 +8,10 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 // import Typography from "@mui/material/Typography";
-import BottomNav from "./components/footer/BottomNav";
+
 import CopyToClipboardButton from "./helper/CopyToClipboard";
 import NewWindowButton from "./helper/NewWindow";
-import ZoomableComponent from "./helper/ZoomZoom";
+
 
 function App() {
   const [category, setCategory] = useState("");
@@ -25,7 +25,7 @@ function App() {
   const [contextMenu, setContextMenu] = useState(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [username, setUsername] = React.useState("");
-  const [authToken, setAuthToken] = useState("");
+  // const [authToken, setAuthToken] = useState("");
 
   useFetchSubCategoryItemData(setItem, subCategory);
   useFetchItemData(setProductData, product);

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -7,18 +6,9 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import Promos from "../promoPage/Promos";
-import OutdoorProducts from "../OutdoorProductsPage/OutdoorProductsPage";
-import frontPageImg1 from "../../../Resources/frontpage_images/cb84cb63-bdb0-4c50-af78-5fc0fb0e0e15.jpg";
-import outDoorProducts from "../../../Resources/frontpage_images/outDoor_products.jpg";
-import banner from "../../../Resources/frontpage_images/banner.jpg";
-import enviro from "../../../Resources/frontpage_images/enviro_products.jpg";
-import Q4 from "../../../Resources/frontpage_images/Q4.jpg";
-import { Item } from "../../../helper/Item";
-import { useFetchCategoryData } from "../../../api/api";
 
 function FrontPage({ category, setSubCategory }) {
-  const [productsCategory, setProductsCategory] = useState([]);
+  // const [productsCategory, setProductsCategory] = useState([]);
 
   return (
     <Box>
@@ -227,90 +217,3 @@ function FrontPage({ category, setSubCategory }) {
 }
 
 export default FrontPage;
-
-{
-  /* <iframe
-              src="https://signzoneinc.sharepoint.com/sites/CustomerServiceDatabase"
-              width="1500"
-              height="800"
-              style={{
-                marginTop: "2em",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            ></iframe>
-
-
-        {/* Repeat the pattern for other grid items */
-}
-{
-  /* Grid item with Aluminum Prints */
-}
-{
-  /* <Grid item xs={12} md={6}>
-          <Paper> */
-}
-{
-  /* <NavLink
-              to={`/Decor/Aluminum Prints`}
-              onClick={() => setSubCategory("Aluminum Prints")}
-            > */
-}
-{
-  /* <img
-              className="placeholder"
-              src={frontPageImg1}
-              alt="Aluminum Prints"
-              style={{
-                width: "100%",
-                objectFit: "contain",
-              }}
-            /> */
-}
-{
-  /* </NavLink> */
-}
-{
-  /* </Paper>
-        </Grid> */
-}
-
-{
-  /* Grid item with Outdoor Products */
-}
-{
-  /* <Grid item xs={12} md={6}>
-          <Paper>
-            <a href="">
-              <img
-                className="placeholder"
-                src={outDoorProducts}
-                alt="Outdoor products"
-                style={{
-                  width: "100%",
-                  objectFit: "contain",
-                }}
-              />
-            </a>
-          </Paper>
-        </Grid> */
-}
-
-{
-  /* Grid item with Enviro Products */
-}
-{
-  /* <Grid item xs={12}>
-          <Paper>
-            <img
-              className="placeholder"
-              src={enviro}
-              alt="Enviro products"
-              style={{
-                width: "100%",
-                objectFit: "contain",
-              }}
-            />
-          </Paper>
-        </Grid> */
-}
