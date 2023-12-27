@@ -68,7 +68,7 @@ function Promos({ setSelectedPromo, selectedPromo, setProduct, productData }) {
               <ListItemIcon
                 sx={{
                   minWidth: 0,
-                  mr: open ? 3 : "auto",
+                  // mr: open ? 3 : "auto",
                   justifyContent: "center",
                 }}
               />

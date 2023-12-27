@@ -17,7 +17,7 @@ function StockOutList({ productData, setProduct }) {
             "https://dull-pink-termite-slip.cyclic.app/items/oos"
           );
           setState(response.data);
-          setLoading(false); // Set loading to false when data is fetched
+          
         } catch (error) {
           console.error(error);
         }
@@ -35,7 +35,7 @@ function StockOutList({ productData, setProduct }) {
             "https://dull-pink-termite-slip.cyclic.app/items/lowStock"
           );
           setState(response.data);
-          setLoading(false); // Set loading to false when data is fetched
+          
         } catch (error) {
           console.error(error);
         }

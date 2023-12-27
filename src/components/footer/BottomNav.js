@@ -6,7 +6,7 @@
 
 // import FavoriteIcon from "@mui/icons-material/Favorite";
 // import RecentlyViewed from "./recents/RecentlyViewed";
-// import { useLocation, useNavigate } from "react-router";
+// import { useLocation, useNavigate } from "react-router-dom";
 
 // import { NavLink } from "react-router-dom";
 // import { styled } from "@mui/system";
@@ -74,7 +74,7 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 
 import { Button, Menu, MenuItem } from "@mui/material";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation} from "react-router";
 import { styled } from "@mui/system";
 import RecentlyViewed from "./recents/RecentlyViewed";
 
@@ -92,7 +92,7 @@ const OpenRecentCustomButton = styled(Button)(({ theme }) => ({
 export default function BottomNav({ productData, setProduct }) {
   const [recentPages, setRecentPages] = useState([]);
   const location = useLocation();
-  const navigate = useNavigate();
+
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);

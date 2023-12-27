@@ -78,26 +78,26 @@ export const useFetchCategoryData = (setState, category) => {
   }, [category, setState]);
 };
 
-export const useFetchRecentItemData = (setState, item) => {
-  const { addRecentlyViewedItem } = useRecentlyViewed();
+// export const useFetchRecentItemData = (setState, item) => {
+//   const { addRecentlyViewedItem } = useRecentlyViewed();
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get(
-          `https://dull-pink-termite-slip.cyclic.app/items?item=${item}`
-        );
-        const itemData = response.data;
-        setState(itemData);
-        addRecentlyViewedItem(itemData); // Add the item to recently viewed list
-      } catch (err) {
-        console.error(err);
-      }
-    };
+//   useEffect(() => {
+//     const fetchProducts = async () => {
+//       try {
+//         const response = await axios.get(
+//           `https://dull-pink-termite-slip.cyclic.app/items?item=${item}`
+//         );
+//         const itemData = response.data;
+//         setState(itemData);
+//         addRecentlyViewedItem(itemData); // Add the item to recently viewed list
+//       } catch (err) {
+//         console.error(err);
+//       }
+//     };
 
-    fetchProducts();
-  }, [item, setState, addRecentlyViewedItem]);
-};
+//     fetchProducts();
+//   }, [item, setState, addRecentlyViewedItem]);
+// };
 
 export const useFetchItemData = (setState, item) => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchData } from "../../../../api/api";
 import { Item } from "../../../../helper/Item";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 
 import ListItemButton from "@mui/material/ListItemButton";
@@ -50,7 +50,7 @@ const RelatedItems = ({ productData, subCategory, category, setProduct }) => {
           <ListItemButton
             sx={{
               minHeight: 48,
-              justifyContent: open ? "initial" : "center",
+              // justifyContent: open ? "initial" : "center",
               px: 2.5,
             }}
             key={index}
@@ -62,7 +62,7 @@ const RelatedItems = ({ productData, subCategory, category, setProduct }) => {
             <ListItemIcon
               sx={{
                 minWidth: 0,
-                mr: open ? 3 : "auto",
+                // mr: open ? 3 : "auto",
                 justifyContent: "center",
               }}
             />
@@ -75,7 +75,7 @@ const RelatedItems = ({ productData, subCategory, category, setProduct }) => {
           <ListItemButton
             sx={{
               minHeight: 48,
-              justifyContent: open ? "initial" : "center",
+              // justifyContent: open ? "initial" : "center",
               px: 2.5,
             }}
             key={index}
@@ -87,7 +87,7 @@ const RelatedItems = ({ productData, subCategory, category, setProduct }) => {
             <ListItemIcon
               sx={{
                 minWidth: 0,
-                mr: open ? 3 : "auto",
+                // mr: open ? 3 : "auto",
                 justifyContent: "center",
               }}
             />

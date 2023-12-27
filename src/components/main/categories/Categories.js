@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 import { useFetchCategoryData } from "../../../api/api";
 
@@ -13,6 +14,7 @@ function CategoriesPage({
   setSubCategory,
   setProductsCategory,
   productsCategory,
+  productData
 }) {
   // const [productsCategory, setProductsCategory] = useState([]);
   const [toggleImage, setToggleImage] = useState(true);
@@ -25,22 +27,22 @@ function CategoriesPage({
     setToggleImage(!toggleImage);
   };
 
-  const handleToggleOutOfStock = async () => {
-    try {
-      // Replace 'yourSubcategory' with the actual subcategory or retrieve it dynamically
-      const subcategory = productData.SubCategory;
+  // const handleToggleOutOfStock = async () => {
+  //   try {
+  //     // Replace 'yourSubcategory' with the actual subcategory or retrieve it dynamically
+  //     const subcategory = productData.SubCategory;
 
-      const response = await axios.put(
-        `https://dull-pink-termite-slip.cyclic.app/toggle-oos/${subcategory}`
-      );
+  //     const response = await axios.put(
+  //       `https://dull-pink-termite-slip.cyclic.app/toggle-oos/${subcategory}`
+  //     );
 
-      // You may need to update this part based on the response structure
-      // If the response doesn't contain 'OOS' directly, adjust accordingly
-      setIsOutOfStock(response.data.OOS);
-    } catch (error) {
-      console.error("Error toggling out-of-stock status:", error);
-    }
-  };
+  //     // You may need to update this part based on the response structure
+  //     // If the response doesn't contain 'OOS' directly, adjust accordingly
+  //     setIsOutOfStock(response.data.OOS);
+  //   } catch (error) {
+  //     console.error("Error toggling out-of-stock status:", error);
+  //   }
+  // };
 
   return (
     <>

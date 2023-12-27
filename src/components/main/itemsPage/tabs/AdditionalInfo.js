@@ -52,7 +52,7 @@ function AdditionalInfo({ productData }) {
         // Reset the form
         setInput("");
         // Trigger a callback to notify the parent component of the update
-        onUpdate();
+        // onUpdate();
       }
     } catch (error) {
       console.error("Error updating or adding additional info", error);

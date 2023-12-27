@@ -95,9 +95,9 @@ function PricingTable({
                         <input
                           type="text"
                           value={selectedElement.value}
-                          onChange={handleCellValueChange}
+                          // onChange={handleCellValueChange}
                         />
-                        <SaveIcon onClick={handleSaveClick} />
+                        {/* <SaveIcon onClick={handleSaveClick} /> */}
                       </>
                     ) : (
                       <>{cellData}</>

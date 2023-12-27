@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Card from "@mui/joy/Card";
 import "./main.css";
 
-import {BrowserRouter as Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import CategoriesPage from "./categories/Categories";
 import FrontPage from "./frontPage/FrontPage";
@@ -83,6 +82,7 @@ function Main({
           objectFit: "contain",
         }}
       >
+        
         <Routes>
           <Route
             path="/"
@@ -220,6 +220,7 @@ function Main({
             }
           />
         </Routes>
+       
       </div>
     </React.Fragment>
   );

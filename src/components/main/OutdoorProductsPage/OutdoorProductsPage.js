@@ -15,7 +15,7 @@ function OutdoorProducts({ productData, setProduct }) {
             "https://dull-pink-termite-slip.cyclic.app/get-outdoorItem"
           );
           setState(response.data);
-          setLoading(false); // Set loading to false when data is fetched
+          // Set loading to false when data is fetched
         } catch (error) {
           console.error(error);
         }
