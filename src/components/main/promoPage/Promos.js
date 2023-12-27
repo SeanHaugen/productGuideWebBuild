@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 
-import ListItemText from "@mui/material/ListItemText";
 
 function Promos({ setSelectedPromo, selectedPromo, setProduct, productData }) {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
 
   const onDeletePromoItem = async () => {
     try {

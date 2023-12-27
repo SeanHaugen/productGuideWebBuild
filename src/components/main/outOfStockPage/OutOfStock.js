@@ -3,7 +3,6 @@ import axios from "axios";
 import "./OOS.css";
 import { NavLink } from "react-router-dom";
 import ListItemButton from "@mui/material/ListItemButton";
-import Checkbox from "@mui/material/Checkbox";
 
 function StockOutList({ productData, setProduct }) {
   const [outOfStockProducts, setOutOfStockProducts] = useState([]);
@@ -42,7 +41,7 @@ function StockOutList({ productData, setProduct }) {
       }
 
       fetchData();
-    }, []);
+    }, [setState]);
   };
 
   useFetchOOSData(setOutOfStockProducts);

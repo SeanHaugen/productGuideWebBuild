@@ -22,7 +22,7 @@ function NewProducts({ productData, setProduct }) {
       }
 
       fetchData();
-    }, []);
+    }, [setState]);
   };
 
   useGetNewItems(setGetNewProducts);

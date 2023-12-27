@@ -68,7 +68,7 @@ function Main({
       }
 
       fetchData();
-    }, []);
+    }, [setState]);
   };
 
   useFetchPromoData(setSelectedPromo);
