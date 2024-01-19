@@ -41,7 +41,7 @@ function LoginModal({ onLogin, username, setUsername }) {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "https://dull-pink-termite-slip.cyclic.app/login",
+        "https://dull-pink-termite-slip.cyclic.app/auth/login",
         {
           username,
           password,
@@ -64,7 +64,7 @@ function LoginModal({ onLogin, username, setUsername }) {
 
     try {
       const response = await axios.post(
-        "https://dull-pink-termite-slip.cyclic.app/register",
+        "https://dull-pink-termite-slip.cyclic.app/auth/register",
         {
           username,
           password,
