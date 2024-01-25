@@ -5,6 +5,11 @@ import TableThrowColors from "../../../../../Resources/misc/colors.png";
 function ColorBox({ productData, compChart }) {
   // console.log(productData.Colors.split(","));
 
+  if (!productData || !productData.Colors) {
+    return "No color options available";
+  }
+
+
   const colorsArray = Array.isArray(productData.Colors)
     ? productData.Colors
     : productData.Colors.split(",");
@@ -96,6 +101,7 @@ function ColorBox({ productData, compChart }) {
   };
 
   const handleColors = (colors) => {
+
     let arrayOfColors = colors.split(",").map((color) => color.trim());
 
     return arrayOfColors.map((color, index) => {
@@ -122,6 +128,7 @@ function ColorBox({ productData, compChart }) {
       );
     });
   };
+  
 
   return (
     <>
