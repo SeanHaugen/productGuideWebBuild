@@ -10,3 +10,18 @@
   /* justify-content: center; */
   align-items: center;
 }
+
+
+
+.frontPage-links {
+  display: flex;
+  margin: 4em;
+}
+
+.fp-button {
+  margin-right: 0.5em;
+}
+
+.team-stats {
+  display: flex;
+}

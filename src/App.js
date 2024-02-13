@@ -4,13 +4,7 @@ import Main from "./components/main/main";
 import { BrowserRouter as Router } from "react-router-dom";
 import DashBoard from "./components/header/dashboard/dashboard";
 import { useFetchSubCategoryItemData, useFetchItemData } from "./api/api";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 
-// import Typography from "@mui/material/Typography";
-
-import CopyToClipboardButton from "./helper/CopyToClipboard";
-import NewWindowButton from "./helper/NewWindow";
 
 
 function App() {
@@ -22,35 +16,16 @@ function App() {
   const [productData, setProductData] = useState([]);
   const [searchData, setSearchData] = useState([]);
   const [query, setQuery] = useState("");
-  const [contextMenu, setContextMenu] = useState(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [username, setUsername] = React.useState("");
+  const [username, setUsername] = useState("");
   // const [authToken, setAuthToken] = useState("");
 
   useFetchSubCategoryItemData(setItem, subCategory);
   useFetchItemData(setProductData, product);
 
   console.log(username);
-  // console.log(productData);
 
-  const handleContextMenu = (event) => {
-    event.preventDefault();
-    setContextMenu(
-      contextMenu === null
-        ? {
-            mouseX: event.clientX + 2,
-            mouseY: event.clientY - 6,
-          }
-        : // repeated contextmenu when it is already open closes it with Chrome 84 on Ubuntu
-          // Other native context menus might behave different.
-          // With this behavior we prevent contextmenu from the backdrop to re-locale existing context menus.
-          null
-    );
-  };
 
-  const handleClose = () => {
-    setContextMenu(null);
-  };
 
   const handleDrawerOpen = () => {
     setDrawerOpen(true);
@@ -62,7 +37,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App" onContextMenu={handleContextMenu}>
+      <div className="App" >
         <DashBoard
           setCategory={setCategory}
           setSubCategory={setSubCategory}
@@ -103,21 +78,7 @@ function App() {
             // drawerOpen={drawerOpen}
           />
         </div>
-        {/* <ZoomableComponent /> */}
-        <Menu
-          open={contextMenu !== null}
-          onClose={handleClose}
-          anchorReference="anchorPosition"
-          anchorPosition={
-            contextMenu !== null
-              ? { top: contextMenu.mouseY, left: contextMenu.mouseX }
-              : undefined
-          }
-        >
-          <CopyToClipboardButton onClick={handleClose} />
-          <NewWindowButton onClick={handleClose} />
-          <MenuItem onClick={handleClose}>Highlight</MenuItem>
-        </Menu>
+
       </div>
     </Router>
   );

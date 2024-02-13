@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import Stats from "./adherence/Stats";
 
 function FrontPage({ category, setSubCategory }) {
   // const [productsCategory, setProductsCategory] = useState([]);
@@ -13,32 +14,18 @@ function FrontPage({ category, setSubCategory }) {
   return (
     <Box>
       {/* Grid container */}
-      <div container>
-        {/* Grid item with image and link */}
-        {/* <Grid item xs={12}>
-          <Paper>
-            <NavLink to={"/Promos"}>
-              <img
-                className="placeholder"
-                src={Q4}
-                alt="Outdoor products"
-                style={{
-                  width: "100%",
-                  objectFit: "contain",
-                }}
-              />
-            </NavLink>
-          </Paper>
-        </Grid> */}
-
-        {/* Grid item with banner and link */}
-        <Grid item>
-          <div>
+      <div container className="container">
+        <Grid item className="grid">
+          <div className="frontPage-links">
             <Typography
               variant="body1"
               style={{ display: "flex", marginTop: ".5em" }}
             >
-              <Button variant="contained" color="success">
+              <Button variant="contained" color="success" 
+                style={{
+                  // backgroundColor: "#7B919C",
+                  marginRight: "5px",
+                }}>
                 <NavLink
                   onClick={() => {
                     if (
@@ -60,7 +47,11 @@ function FrontPage({ category, setSubCategory }) {
               variant="body1"
               style={{ display: "flex", marginTop: ".5em" }}
             >
-              <Button variant="contained" color="success">
+              <Button variant="contained" color="success"                   
+              style={{
+                    // backgroundColor: "#7B919C",
+                    marginRight: "5px",
+                  }}>
                 <NavLink
                   onClick={() => {
                     if (
@@ -147,69 +138,21 @@ function FrontPage({ category, setSubCategory }) {
               </NavLink>
             </Typography>
           </div>
+          {/* <Grid>
+   
+              <h1>Change Log</h1>
+            
+          </Grid> */}
           <Grid>
             <Paper>
-              <h1>Change Log</h1>
-              <ul>
-                <li>Added Change Log</li>
-                <li>Updated buttons</li>
-                <li>Added Comparison Charts</li>
-                <li>Added new user registration</li>
-              </ul>
+              <iframe title="dashboard" height="500px" width="1100px" src="https://analytics.8x8.com/shared-dashboard/9f5cecc8-b02a-49c4-a0da-a67a8c5f8e74/dark"></iframe>
             </Paper>
           </Grid>
-          <Paper>
-            <header>
-              <h2>Future plans</h2>
-              <p>Plans for future development</p>
-              <ul>
-                <li>Allow users to Save Items in a "Favorites" list</li>
-                <li>
-                  Implement a Fedex freight calculator where all that is needed
-                  is a zip code
-                </li>
-                <li>Allow users to edit their individual layout</li>
-                <li>
-                  Add dedicated sidebar or Tab for the hardware and replacement
-                  graphics of relevant items
-                </li>
-                <li>
-                  Self promo and Canada Flat rate calculations done
-                  automatically
-                </li>
-                <li>
-                  Revamping related items to be more useful. For example the
-                  related items should show the related, hardware, graphic, or
-                  kit for the item your looking at.
-                </li>
-                <li>
-                  Adding a pop open sidebar for subcategories when hovering over
-                  that category
-                </li>
-                <li>Adding clearance items/list</li>
-                <li>User authentication</li>
-              </ul>
-              <h2>Wishlist</h2>
-              These are things that I'm hoping we can implement however due to
-              limitations in my position they may not be possible
-              <ul>
-                <li>Pricing up to qty 100</li>
-                <li>Inventory linked to item pages</li>
-                <li>Matching cases to items</li>
-              </ul>
-              <h3>Bugs</h3>
-              <p>
-                There are many bugs you might encounter. If you find one please
-                let me know and I'll address it as soon as possible.
-                <ul>Known Bugs</ul>
-                <li>
-                  Search bar not optimized. Will not accept special characters
-                  such as quotations to denote ft and inches
-                </li>
-                {/* <li></li> */}
-              </p>
-            </header>
-          </Paper>
+          <Grid>
+            <Paper>
+              <Stats />
+            </Paper>
+          </Grid>
         </Grid>
       </div>
     </Box>

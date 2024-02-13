@@ -1,24 +1,24 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+// import { useNavigate } from "react-router-dom";
+// import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./navigation.css";
 
 function Navigation({ productData }) {
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
-  const goBack = () => {
-    navigate(-1);
-  };
+  // const goBack = () => {
+  //   navigate(-1);
+  // };
 
-  const goForward = () => {
-    navigate(1);
-  };
+  // const goForward = () => {
+  //   navigate(1);
+  // };
 
   return (
     <div>
       <div className="navigation-container">
-        <button
+        {/* <button
           className="nav-button"
           onClick={goBack}
           style={{ marginRight: "10px" }}
@@ -27,7 +27,7 @@ function Navigation({ productData }) {
         </button>
         <button className="nav-button" onClick={goForward}>
           <ArrowForwardIosIcon />
-        </button>
+        </button> */}
       </div>
     </div>
   );
