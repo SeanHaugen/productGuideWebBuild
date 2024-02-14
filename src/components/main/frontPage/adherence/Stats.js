@@ -34,7 +34,12 @@ function Stats () {
             <StatsTable stats={stats} />
             <StatsGraph stats={stats} />
             <img src={orderHistory} alt="rolling 4 day # of new orders"/>
+<<<<<<< HEAD
             <img src={ordersProcessed} alt="daily order totals" />
+=======
+            <img src={ordersProcessed} alt="dailing order totals" />
+            
+>>>>>>> c12e378693d476e463b920bcf3ec3071280e4c16
         </div>
     )
 }
