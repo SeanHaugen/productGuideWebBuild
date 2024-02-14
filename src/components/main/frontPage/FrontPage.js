@@ -145,7 +145,7 @@ function FrontPage({ category, setSubCategory }) {
           </Grid> */}
           <Grid>
             <Paper>
-              <iframe title="dashboard" height="500px" width="1100px" src="https://analytics.8x8.com/shared-dashboard/9f5cecc8-b02a-49c4-a0da-a67a8c5f8e74/dark"></iframe>
+              <iframe title="dashboard" height="500px" width="1100" src="https://analytics.8x8.com/shared-dashboard/9f5cecc8-b02a-49c4-a0da-a67a8c5f8e74/dark"></iframe>
             </Paper>
           </Grid>
           <Grid>
