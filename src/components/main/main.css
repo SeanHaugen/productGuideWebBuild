@@ -25,3 +25,9 @@
 .team-stats {
   display: flex;
 }
+
+.stats-bar-chart {
+
+  display: flex;
+  justify-content: center;
+}
