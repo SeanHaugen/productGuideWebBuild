@@ -40,7 +40,7 @@ function StatsTable ({stats}) {
     let sfCallLog = stats.map((i, index) =>  (i.SF_CALL_LOG_PERCENTAGE));
     let averageHoldTime = stats.map((i, index) =>  (i.AHT));
     let chats = stats.map((i, index) =>  (i.CHATS));
-    let adherencePercentage = stats.map((i, index) =>  (i.ADHERENCE_PERCENTAGE));
+
 
     function createData(name, calls, callExperience, sfCallLog, averageHoldTime, chats) {
         return { name, calls, callExperience, sfCallLog, averageHoldTime, chats};
