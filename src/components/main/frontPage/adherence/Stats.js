@@ -25,7 +25,7 @@ function Stats () {
 
     return (
         <div>
-            <h2>Daily Adherence Report</h2>
+            <h2>Daily Adherence Report 2/12/24</h2>
             {/* <StatsGraphs /> */}
 
             <StatsTable stats={stats} />
