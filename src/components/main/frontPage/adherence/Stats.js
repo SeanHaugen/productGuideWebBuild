@@ -3,9 +3,9 @@ import axios from "axios"
 // import { BarChart } from '@mui/x-charts/BarChart';
 import StatsTable from "./StatsTable";
 import StatsGraph from "./StatsGraph";
-import orderHistory from '../../../../Resources/rolling-5-day.png';
-// import ordersProcessed from '../../../../Resources/Screenshot 2024-02-14 100639.png';
-import UploadAndDisplayImage from "../Upload&Display";
+import ordersProcessed from '../../../../Resources/orders-line-graph.png';
+import OM from '../../../../Resources/om.2.15.png';
+
 
 function Stats () {
 
@@ -34,9 +34,8 @@ function Stats () {
 
             <StatsTable stats={stats} />
             <StatsGraph stats={stats} />
-            <img src={orderHistory} alt="rolling 4 day # of new orders"/>
-            <UploadAndDisplayImage />
-            {/* <img src={ordersProcessed} alt="daily order totals" /> */}
+            <img src={ordersProcessed} alt="rolling 5 day # of new orders"/>
+            <img src={OM} alt="daily order totals" />
             
 
         </div>
