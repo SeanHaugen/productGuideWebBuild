@@ -4,7 +4,8 @@ import axios from "axios"
 import StatsTable from "./StatsTable";
 import StatsGraph from "./StatsGraph";
 import orderHistory from '../../../../Resources/rolling-5-day.png';
-import ordersProcessed from '../../../../Resources/Screenshot 2024-02-14 100639.png';
+// import ordersProcessed from '../../../../Resources/Screenshot 2024-02-14 100639.png';
+import UploadAndDisplayImage from "../Upload&Display";
 
 function Stats () {
 
@@ -34,7 +35,9 @@ function Stats () {
             <StatsTable stats={stats} />
             <StatsGraph stats={stats} />
             <img src={orderHistory} alt="rolling 4 day # of new orders"/>
-            <img src={ordersProcessed} alt="daily order totals" />
+            <UploadAndDisplayImage />
+            {/* <img src={ordersProcessed} alt="daily order totals" /> */}
+            
 
         </div>
     )
