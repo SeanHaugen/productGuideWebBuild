@@ -3,8 +3,8 @@ import axios from "axios"
 // import { BarChart } from '@mui/x-charts/BarChart';
 import StatsTable from "./StatsTable";
 import StatsGraph from "./StatsGraph";
-import ordersProcessed from '../../../../Resources/orders-line-graph.png';
-import OM from '../../../../Resources/om.2.15.png';
+import ordersProcessed from '../../../../Resources/orders.png';
+import OM from '../../../../Resources/om.png';
 
 
 function Stats () {
