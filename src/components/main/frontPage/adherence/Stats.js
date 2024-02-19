@@ -29,9 +29,8 @@ function Stats () {
 
     return (
         <div>
-            <h2>Adherence Report 2/13/24</h2>
+            <h2>Adherence Report 2/16/24</h2>
             {/* <StatsGraphs /> */}
-
             <StatsTable stats={stats} />
             <StatsGraph stats={stats} />
             <img src={ordersProcessed} alt="rolling 5 day # of new orders"/>
