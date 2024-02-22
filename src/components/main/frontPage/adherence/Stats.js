@@ -5,6 +5,7 @@ import StatsTable from "./StatsTable";
 import StatsGraph from "./StatsGraph";
 import ordersProcessed from '../../../../Resources/orders.png';
 import OM from '../../../../Resources/om.png';
+import graphics from '../../../../Resources/graphics.png';
 
 
 function Stats () {
@@ -29,12 +30,13 @@ function Stats () {
 
     return (
         <div>
-            <h2>Adherence Report 2/16/24</h2>
+            <h2>Adherence Report 2/21/24</h2>
             {/* <StatsGraphs /> */}
             <StatsTable stats={stats} />
             <StatsGraph stats={stats} />
             <img src={ordersProcessed} alt="rolling 5 day # of new orders"/>
             <img src={OM} alt="daily order totals" />
+            <img src={graphics} alt="daily graphics totals" />
             
 
         </div>
