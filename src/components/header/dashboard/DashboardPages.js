@@ -24,7 +24,7 @@ const LowerBar = ({ username, setUsername, productData, setProduct }) => {
         display: "block",
         justifyContent: "center",
         alignContent: "center",
-        marginLeft: "12em",
+        // marginLeft: "12em",
       }}
     >
       <div

@@ -22,8 +22,6 @@ const chartSetting = {
     if (!stats || stats.length === 0) {
         return <div>No data available</div>;
     }
-
-
       let names = stats.map((i) => i.NAME);
       let calls = stats.map((i) => i.CALLS);
       let callExperience = stats.map((i) => i.CALL_EXPERIENCE);

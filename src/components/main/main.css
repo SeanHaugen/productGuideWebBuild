@@ -8,7 +8,8 @@
 .main {
   width: 100%; /* Adjust width to fill the entire width */
   /* justify-content: center; */
-  align-items: center;
+  align-items: center; 
+  
 }
 
 

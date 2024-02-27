@@ -58,7 +58,7 @@ function StatsTable ({stats}) {
         <>
 
         <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <Table sx={{ maxWidth: 700 }} aria-label="customized table">
                 <TableHead>
                 <TableRow>
                     <StyledTableCell>Name</StyledTableCell>

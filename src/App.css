@@ -18,7 +18,7 @@ body {
 .main-container {
   flex-grow: 1; /* Allow the main content to grow and fill available space */
   padding: 1em;
-  margin-left: 4em;
+  /* margin-left: 4em; */
 }
 
 /* Responsive Styling */

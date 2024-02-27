@@ -107,23 +107,6 @@ function FrontPage({ category, setSubCategory }) {
               variant="body1"
               style={{ display: "flex", marginTop: ".5em" }}
             >
-              <NavLink to={"/addProduct"}>
-                <Button
-                  variant="contained"
-                  color="success"
-                  style={{
-                    // backgroundColor: "#7B919C",
-                    marginRight: "5px",
-                  }}
-                >
-                  Add Products
-                </Button>
-              </NavLink>
-            </Typography>
-            <Typography
-              variant="body1"
-              style={{ display: "flex", marginTop: ".5em" }}
-            >
               <NavLink to={"/NewProducts"}>
                 <Button
                   variant="contained"
@@ -134,6 +117,23 @@ function FrontPage({ category, setSubCategory }) {
                   }}
                 >
                   New Products
+                </Button>
+              </NavLink>
+            </Typography>
+            <Typography
+              variant="body1"
+              style={{ display: "flex", marginTop: ".5em" }}
+            >
+              <NavLink to={"/addProduct"}>
+                <Button
+                  variant="contained"
+                  color="success"
+                  style={{
+                    // backgroundColor: "#7B919C",
+                    marginRight: "5px",
+                  }}
+                >
+                  Add Products
                 </Button>
               </NavLink>
             </Typography>
