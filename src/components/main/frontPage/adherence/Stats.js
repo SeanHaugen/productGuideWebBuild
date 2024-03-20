@@ -46,9 +46,7 @@ function Stats() {
 
   return (
     <div>
-      <h2>Adherence Report </h2>
       {/* <StatsGraphs /> */}
-      
       
       <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
         {slides.map((slide, index) => (
