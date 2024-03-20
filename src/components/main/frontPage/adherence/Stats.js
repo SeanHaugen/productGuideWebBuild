@@ -7,7 +7,7 @@ import StatsGraph from "./StatsGraph";
 import ordersProcessed from "../../../../Resources/orders.png";
 import OM from "../../../../Resources/om.png";
 import graphics from "../../../../Resources/graphics.png"
-import RC from "../../../../Resources/rc.png";
+// import RC from "../../../../Resources/rc.png";
 
 function Stats() {
   const [stats, setStats] = useState([]);
@@ -38,15 +38,14 @@ function Stats() {
   const ordersImage = <img src={ordersProcessed} alt="rolling 5 day # of new orders" />;
   const omImage = <img src={OM} alt="daily order totals" />;
   const graphicsImage = <img src={graphics} alt="daily graphics totals" />;
-  const rcImage = <img src={RC} alt="production report card" />;
+  // const rcImage = <img src={RC} alt="production report card" />;
 
   const slides = [
   
     <StatsTable stats={stats} />,
     <StatsGraph stats={stats} />,
-    ordersImage,
-    rcImage,
     graphicsImage,
+    ordersImage,
     omImage,
     
     
@@ -56,7 +55,7 @@ function Stats() {
     <div>
       {/* <StatsGraphs /> */}
       
-      <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+      <div style={{ position: "relative", width: "100%", overflow: "scroll" }}>
       {slides.map((slide, index) => (
           <div
             key={index}
