@@ -45,9 +45,9 @@ function Stats() {
     <StatsTable stats={stats} />,
     <StatsGraph stats={stats} />,
     ordersImage,
-    omImage,
     rcImage,
     graphicsImage,
+    omImage,
     
     
   ];
