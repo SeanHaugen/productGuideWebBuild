@@ -6,7 +6,7 @@ import StatsTable from "./StatsTable";
 import StatsGraph from "./StatsGraph";
 import ordersProcessed from "../../../../Resources/orders.png";
 import OM from "../../../../Resources/om.png";
-import graphics from "../../../../Resources/graphics.png";
+import graphics from "../../../../Resources/graphics.png"
 import RC from "../../../../Resources/rc.png";
 
 function Stats() {
@@ -35,13 +35,21 @@ function Stats() {
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, []);
 
+  const ordersImage = <img src={ordersProcessed} alt="rolling 5 day # of new orders" />;
+  const omImage = <img src={OM} alt="daily order totals" />;
+  const graphicsImage = <img src={graphics} alt="daily graphics totals" />;
+  const rcImage = <img src={RC} alt="production report card" />;
+
   const slides = [
+  
     <StatsTable stats={stats} />,
     <StatsGraph stats={stats} />,
-    <img key={1} src={ordersProcessed} alt="rolling 5 day # of new orders" />,
-    <img key={2} src={OM} alt="daily order totals" />,
-    <img key={3} src={graphics} alt="daily graphics totals" />,
-    <img key={4} src={RC} alt="production report card" />,
+    ordersImage,
+    omImage,
+    rcImage,
+    graphicsImage,
+    
+    
   ];
 
   return (
@@ -49,7 +57,7 @@ function Stats() {
       {/* <StatsGraphs /> */}
       
       <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
-        {slides.map((slide, index) => (
+      {slides.map((slide, index) => (
           <div
             key={index}
             style={{
