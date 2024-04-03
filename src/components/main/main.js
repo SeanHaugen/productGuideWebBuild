@@ -14,6 +14,7 @@ import Promos from "./promoPage/Promos";
 import StockOutList from "./outOfStockPage/OutOfStock";
 import NewProducts from "./newProductsPage/NewProducts";
 import OutdoorProducts from "./OutdoorProductsPage/OutdoorProductsPage";
+import Acumatica from "./acumaticaTraining/Acumatica";
 // import FavoriteList from "./favorites/Favorites";
 
 function Main({
@@ -219,6 +220,13 @@ function Main({
               />
             }
           />
+
+          <Route
+            path="/AcumaticaTraining"
+            element={
+              <Acumatica />
+            }
+          /> 
         </Routes>
        
       </div>

@@ -60,7 +60,7 @@ const LowerBar = ({ username, setUsername, productData, setProduct }) => {
           </CustomButton>
         </NavLink>
         <BottomNav productData={productData} setProduct={setProduct} />
-        {/* <NavLink to={"/Promos"}>
+        <NavLink to={"/AcumaticaTraining"}>
           <CustomButton
             variant="contained"
             style={{
@@ -68,9 +68,9 @@ const LowerBar = ({ username, setUsername, productData, setProduct }) => {
               marginRight: "5px",
             }}
           >
-            Promos
+            Acumatica Training
           </CustomButton>
-        </NavLink> */}
+        </NavLink>
         {/* <NavLink to={"/NewProducts"}>
           <CustomButton
             variant="contained"
