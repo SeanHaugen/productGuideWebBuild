@@ -3,7 +3,6 @@ import {customerOrders, orderFollowUpQuestions, callbackQuestions} from "./Custo
 import Button from '@mui/joy/Button';
 import Divider from '@mui/joy/Divider';
 import Card from '@mui/joy/Card';
-import Sheet from '@mui/joy/Sheet';
 import Typography from '@mui/joy/Typography';
 
 
@@ -86,7 +85,7 @@ function Acumatica() {
             <h2>Part 1: Order Entry</h2>
             <p>This section will simulate getting a call or email order request</p>
             <Card size="lg">
-                <Button size="lg" onClick={() => {getCustomerOrder(customerOrders); setHidden(false); setHidden2(true)}} >Answer Call</Button>
+                <Button size="lg" onClick={() => {getCustomerOrder(customerOrders); setHidden(false); setHidden2(true)}} >Answer Call/Email</Button>
                 <Typography hidden={hidden} >
                     {selectedOrderRequest}
                     
