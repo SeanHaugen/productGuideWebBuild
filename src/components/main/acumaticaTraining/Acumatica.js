@@ -148,7 +148,6 @@ function Acumatica() {
         <div className="acu-part-two">  
             <div>
                 <h2>Part 2: Modifying an order</h2>
-                <p>This section will give a scenario in which a order has been modified and the customer is inquiring into that or the customer is calling in with a modification on their order.</p>
                 <p>If the scenarios PO was not completed by your group in part one, proceed to the next until one pops up. Questions will not repeat.</p>
                 <Card size="lg">
                     <Button size="lg"  onClick={() => {getCallbackQuestions(callbackQuestions); setHidden3(false)}}>Modification Scenario</Button>
