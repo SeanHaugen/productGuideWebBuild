@@ -54,31 +54,31 @@ export const orderFollowUpQuestions =
 
 export const callbackQuestions = 
 [
-    "Customer needs their shipping address changed and confirmation sent for PO: floridaman. Change the address and send a confirmation",
-    "The Customer has not received a proof, check who the proof was sent to and then resend to a new email provided by the caller.",
-    "Assume the customer has not prepayed this order yet. The customer is contacting us to do so for PO: YF321",
-    "The customer is contacting us to split the order and have hardware sent ground and graphics sent overnight when they're complete. PO: WB78241B ",
-    "The customer is calling back to ask if you receive the artwork? Assume it has been received, where do you check?  table789",
-    "Assume PO: PO356819 had to be rescheduled due to a missprint and customer is inquiring as to why. They now need this to be overnighted for ground rate",
-    "Customer has submitted an order via email with PO: pickMeUP and OM reached out for prepayment. They want to speak with the person that entered the order to complete prepayment, find the OM Rep.",
+    // "Customer needs their shipping address changed and confirmation sent for PO: floridaman. Change the address and send a confirmation",
+    // "The Customer has not received a proof, check who the proof was sent to and then resend to a new email provided by the caller.",
+    // "Assume the customer has not prepayed this order yet. The customer is contacting us to do so for PO: YF321",
+    // "The customer is contacting us to split the order and have hardware sent ground and graphics sent overnight when they're complete. PO: WB78241B ",
+    // "The customer is calling back to ask if you receive the artwork? Assume it has been received, where do you check?  table789",
+    // "Assume PO: PO356819 had to be rescheduled due to a missprint and customer is inquiring as to why. They now need this to be overnighted for ground rate",
+    // "Customer has submitted an order via email with PO: pickMeUP and OM reached out for prepayment. They want to speak with the person that entered the order to complete prepayment, find the OM Rep.",
 
-    "Assume art has been submitted and we have gone into production. Customer is now asking if they can submit new artwork and does not care about a used materials fee. Add the used materials fee and explain how you would add new artwork to this order.",
+    // "Assume art has been submitted and we have gone into production. Customer is now asking if they can submit new artwork and does not care about a used materials fee. Add the used materials fee and explain how you would add new artwork to this order.",
     
-    "Customer has some issues with the proof. Find the orders assigned Graphics Coordinator for PO: PO62417B ",
-    "Customer needs to add a tablethrow to an order already in production. They still need to meet the same IHD and will pay for overnight. Add the tablethrow and change the shipping to overnight. PO: PO92184C ",
-    "Customer wants you to take a look at their proof. Go through the process of how you would pull the proof up. PO: PO578923 ",
-    "Assume the order has just moved to graphics. Customer now has revised art as well as a second art file. They need 10 the second artwork and keep 15 with the first artwork. PO: xyz123",
+    // "Customer has some issues with the proof. Find the orders assigned Graphics Coordinator for PO: PO62417B ",
+    // "Customer needs to add a tablethrow to an order already in production. They still need to meet the same IHD and will pay for overnight. Add the tablethrow and change the shipping to overnight. PO: PO92184C ",
+    // "Customer wants you to take a look at their proof. Go through the process of how you would pull the proof up. PO: PO578923 ",
+    // "Assume the order has just moved to graphics. Customer now has revised art as well as a second art file. They need 10 the second artwork and keep 15 with the first artwork. PO: xyz123",
     
-    "The customer needs the order sent the end user under a different name. Enter a double blind shipping name. PO: PO83762A",
-    "Change the customers shipping info from Fedex Ground to UPS Overnight. PO: USAROX", 
-    "Assume this order had to be rescheduled and the customer already charged the end user. Change the shipping to overnight and only charge ground. PO691457",
+    // "The customer needs the order sent the end user under a different name. Enter a double blind shipping name. PO: PO83762A",
+    // "Change the customers shipping info from Fedex Ground to UPS Overnight. PO: USAROX", 
+    // "Assume this order had to be rescheduled and the customer already charged the end user. Change the shipping to overnight and only charge ground. PO691457",
    
-    "The customer is changing the quantity for PO: w54532, they will only need 10 pillows",
-    "I need an additional 30 US flags for PO: USAROX",
+    // "The customer is changing the quantity for PO: w54532, they will only need 10 pillows",
+    // "I need an additional 30 US flags for PO: USAROX",
     
-    "I submitted my order online and never received confirmation. Can you send me an order confirmation?",
-    "Assume PO: xyz123 had a quarterly promo but the promo price was never applied to the order. They already prepayed this order. can you correct the pricing and add the discount.",
-    "I got sent something different and I'm scared to click anything in case its spam. How do I approve my proof? Navigate to the proof approval page and explain how the new proof approval system works. ",
-    "The customer no longer needs this for an event, change the shipping to ground and rescheduled. rudeCustomer123",
-    "Prepayment declined on a web or email order. Take the customers valid CC info",
+    // "I submitted my order online and never received confirmation. Can you send me an order confirmation?",
+    // "Assume PO: xyz123 had a quarterly promo but the promo price was never applied to the order. They already prepayed this order. can you correct the pricing and add the discount.",
+    // "I got sent something different and I'm scared to click anything in case its spam. How do I approve my proof? Navigate to the proof approval page and explain how the new proof approval system works. ",
+    // "The customer no longer needs this for an event, change the shipping to ground and rescheduled. rudeCustomer123",
+    // "Prepayment declined on a web or email order. Take the customers valid CC info",
 ]

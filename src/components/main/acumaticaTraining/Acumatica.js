@@ -4,6 +4,7 @@ import Button from '@mui/joy/Button';
 import Divider from '@mui/joy/Divider';
 import Card from '@mui/joy/Card';
 import Typography from '@mui/joy/Typography'
+import  Quiz from "./quiz/Quiz";
 
 
 
@@ -159,6 +160,7 @@ function Acumatica() {
             </div>
         </div>
         </div>
+        <Quiz />
         </>
     )
 }

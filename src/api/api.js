@@ -4,31 +4,17 @@ import axios from "axios";
 
 // `https://dull-pink-termite-slip.cyclic.app`;
 
+
 export const useCategoryData = (setState) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const apiUrl = "https://dull-pink-termite-slip.cyclic.app/category";
-        const response = await axios.get(apiUrl);
-        setState(response.data);
+        // Assuming items.json is in the public folder
+        const response = await fetch('/items.json');
+        const data = await response.json();
+        setState(data);
       } catch (error) {
-        console.error("Error fetching API data!!:", error);
-      }
-    };
-
-    fetchData();
-  }, [setState]);
-};
-
-export const useFetchSubCategoryData = (setState) => {
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const apiUrl = "https://dull-pink-termite-slip.cyclic.app/SubCategory";
-        const response = await axios.get(apiUrl);
-        setState(response.data);
-      } catch (error) {
-        console.error("Error fetching API data!!:", error);
+        console.error("Error fetching data from items.json:", error);
       }
     };
 
